@@ -5,15 +5,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -24,12 +18,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("wallet_1")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
@@ -42,8 +36,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -52,15 +45,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -71,12 +58,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("wallet_1")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
@@ -89,8 +76,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -100,15 +86,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -119,12 +99,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
@@ -137,8 +117,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -147,15 +126,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -166,12 +139,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
@@ -184,8 +157,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -194,15 +166,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -213,12 +179,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare-and-revoke-access",
@@ -231,8 +197,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -241,15 +206,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -260,12 +219,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
@@ -278,8 +237,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -287,41 +245,15 @@ Clarinet.test({
   name:
     "test-protocol-set-token-uri-external: Non-protocol cannot set asset token URI",
   fn(chain: Chain, accounts: Map<string, Account>) {
-    const deployer = accounts.get("deployer")!;
-    const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
-      ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
-    ];
-    const { receipts } = chain.mineBlock([
-      Tx.contractCall(
-        `${deployer.address}.sbtc-controller`,
-        "upgrade",
-        [types.list(
-          bootstrapContracts.map((contract) =>
-            types.tuple({ contract, enabled: true })
-          ),
-        )],
-        deployer.address,
-      ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
-      result.expectBool(true)
-    );
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "test-protocol-set-token-uri-external",
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -330,15 +262,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -349,12 +275,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare-add-test-to-protocol",
@@ -367,8 +293,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -376,41 +301,15 @@ Clarinet.test({
   name:
     "test-protocol-set-symbol-external: Non-protocol cannot set asset symbol",
   fn(chain: Chain, accounts: Map<string, Account>) {
-    const deployer = accounts.get("deployer")!;
-    const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
-      ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
-    ];
-    const { receipts } = chain.mineBlock([
-      Tx.contractCall(
-        `${deployer.address}.sbtc-controller`,
-        "upgrade",
-        [types.list(
-          bootstrapContracts.map((contract) =>
-            types.tuple({ contract, enabled: true })
-          ),
-        )],
-        deployer.address,
-      ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
-      result.expectBool(true)
-    );
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "test-protocol-set-symbol-external",
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -419,15 +318,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -438,12 +331,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare-add-test-to-protocol",
@@ -456,49 +349,22 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
 Clarinet.test({
   name: "test-protocol-set-name-external: Non-protocol cannot set asset name",
   fn(chain: Chain, accounts: Map<string, Account>) {
-    const deployer = accounts.get("deployer")!;
-    const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
-      ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
-    ];
-    const { receipts } = chain.mineBlock([
-      Tx.contractCall(
-        `${deployer.address}.sbtc-controller`,
-        "upgrade",
-        [types.list(
-          bootstrapContracts.map((contract) =>
-            types.tuple({ contract, enabled: true })
-          ),
-        )],
-        deployer.address,
-      ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
-      result.expectBool(true)
-    );
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "test-protocol-set-name-external",
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -507,15 +373,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -526,12 +386,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare-add-test-to-protocol",
@@ -544,8 +404,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -553,41 +412,15 @@ Clarinet.test({
   name:
     "test-protocol-mint-many-external: Non-protocol contracts cannot mint tokens",
   fn(chain: Chain, accounts: Map<string, Account>) {
-    const deployer = accounts.get("deployer")!;
-    const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
-      ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
-    ];
-    const { receipts } = chain.mineBlock([
-      Tx.contractCall(
-        `${deployer.address}.sbtc-controller`,
-        "upgrade",
-        [types.list(
-          bootstrapContracts.map((contract) =>
-            types.tuple({ contract, enabled: true })
-          ),
-        )],
-        deployer.address,
-      ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
-      result.expectBool(true)
-    );
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "test-protocol-mint-many-external",
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -596,15 +429,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -615,12 +442,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare-add-test-to-protocol",
@@ -633,8 +460,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -642,41 +468,15 @@ Clarinet.test({
   name:
     "test-protocol-mint-external: Non-protocol contracts cannot mint tokens",
   fn(chain: Chain, accounts: Map<string, Account>) {
-    const deployer = accounts.get("deployer")!;
-    const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
-      ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
-    ];
-    const { receipts } = chain.mineBlock([
-      Tx.contractCall(
-        `${deployer.address}.sbtc-controller`,
-        "upgrade",
-        [types.list(
-          bootstrapContracts.map((contract) =>
-            types.tuple({ contract, enabled: true })
-          ),
-        )],
-        deployer.address,
-      ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
-      result.expectBool(true)
-    );
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "test-protocol-mint-external",
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -685,15 +485,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -704,12 +498,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare-add-test-to-protocol",
@@ -722,8 +516,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -732,15 +525,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -751,12 +538,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare-and-revoke-access",
@@ -769,8 +556,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -779,15 +565,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -798,12 +578,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
@@ -816,8 +596,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -827,15 +606,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -846,12 +619,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
@@ -864,8 +637,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -874,15 +646,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -893,12 +659,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
@@ -911,8 +677,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -921,15 +686,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -940,12 +699,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare-and-revoke-access",
@@ -958,8 +717,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -968,15 +726,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -987,12 +739,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
@@ -1005,8 +757,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -1015,15 +766,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -1034,12 +779,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
@@ -1052,8 +797,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -1062,15 +806,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -1081,12 +819,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
@@ -1099,8 +837,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -1109,15 +846,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -1128,12 +859,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
@@ -1146,8 +877,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -1156,15 +886,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -1175,12 +899,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
@@ -1193,8 +917,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -1203,15 +926,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -1222,12 +939,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
@@ -1240,8 +957,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -1250,15 +966,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -1269,12 +979,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
@@ -1287,8 +997,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -1298,15 +1007,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -1317,12 +1020,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
@@ -1335,8 +1038,7 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
 
@@ -1345,15 +1047,9 @@ Clarinet.test({
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
-      ".sbtc-token",
-      ".sbtc-deposit-verifier",
-      ".sbtc-withdrawal-verifier",
-      ".sbtc-registry",
-      ".sbtc-stacking-pool",
       ".sbtc-testnet-debug-controller",
-      ".sbtc-token",
     ];
-    const { receipts } = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         `${deployer.address}.sbtc-controller`,
         "upgrade",
@@ -1364,12 +1060,12 @@ Clarinet.test({
         )],
         deployer.address,
       ),
-    ]);
-    receipts[0].result.expectOk().expectList().map((result) =>
+    ]).receipts[0].result.expectOk().expectList().map((result) =>
       result.expectBool(true)
     );
+
     const callerAddress = accounts.get("deployer")!.address;
-    const block = chain.mineBlock([
+    chain.mineBlock([
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
@@ -1382,7 +1078,6 @@ Clarinet.test({
         [],
         callerAddress,
       ),
-    ]);
-    block.receipts.map(({ result }) => result.expectOk());
+    ]).receipts.map(({ result }) => result.expectOk());
   },
 });
