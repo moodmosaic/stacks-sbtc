@@ -273,5 +273,5 @@
 
 ;; @name Can get token URI
 (define-public (test-get-token-uri)
-	(ok (asserts! (is-eq (contract-call? .sbtc-token get-token-uri) (ok none)) (err "Total supply does not match")))
+	(ok (asserts! (is-eq (contract-call? .sbtc-token get-token-uri) (ok none)) (err "Token URI is not none")))
 )
