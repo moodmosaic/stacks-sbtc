@@ -37,7 +37,7 @@
 
 ;; @name Cannot transfer someone else's tokens
 ;; @caller wallet_1
-(define-public (test-transfer-external)
+(define-public (test-transfer-someone-elses-tokens)
 	(assert-eq (contract-call? .sbtc-token transfer u100 wallet-2 tx-sender none) err-not-token-owner "Should have failed")
 )
 

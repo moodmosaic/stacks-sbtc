@@ -1,7 +1,7 @@
 import { Account, Chain, Clarinet, Tx, types } from "./deps.ts";
 
 Clarinet.test({
-  name: "test-transfer-external: Cannot transfer someone else's tokens",
+  name: "test-transfer-someone-elses-tokens: Cannot transfer someone else's tokens",
   fn(chain: Chain, accounts: Map<string, Account>) {
     const deployer = accounts.get("deployer")!;
     const bootstrapContracts = [
