@@ -22,7 +22,6 @@ Clarinet.test({
       result.expectBool(true)
     );
 
-    const callerAddress = accounts.get("wallet_1")!.address;
     chain.mineBlock([
       Tx.contractCall(
         "sbtc-token_test",
@@ -30,11 +29,12 @@ Clarinet.test({
         [types.uint(10000000)],
         deployer.address,
       ),
+
       Tx.contractCall(
         "sbtc-token_test",
         "test-transfer-external",
         [],
-        callerAddress,
+        accounts.get("wallet_1")!.address,
       ),
     ]).receipts.map(({ result }) => result.expectOk());
   },
@@ -62,7 +62,6 @@ Clarinet.test({
       result.expectBool(true)
     );
 
-    const callerAddress = accounts.get("wallet_1")!.address;
     chain.mineBlock([
       Tx.contractCall(
         "sbtc-token_test",
@@ -70,11 +69,12 @@ Clarinet.test({
         [types.uint(10000000)],
         deployer.address,
       ),
+
       Tx.contractCall(
         "sbtc-token_test",
         "test-transfer",
         [],
-        callerAddress,
+        accounts.get("wallet_1")!.address,
       ),
     ]).receipts.map(({ result }) => result.expectOk());
   },
@@ -102,7 +102,6 @@ Clarinet.test({
       result.expectBool(true)
     );
 
-    const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
         "sbtc-token_test",
@@ -110,11 +109,12 @@ Clarinet.test({
         [types.uint(10000000)],
         deployer.address,
       ),
+
       Tx.contractCall(
         "sbtc-token_test",
         "test-get-total-supply",
         [],
-        callerAddress,
+        accounts.get("deployer")!.address,
       ),
     ]).receipts.map(({ result }) => result.expectOk());
   },
@@ -123,13 +123,12 @@ Clarinet.test({
 Clarinet.test({
   name: "test-get-token-uri: Can get token URI",
   fn(chain: Chain, accounts: Map<string, Account>) {
-    const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
         "sbtc-token_test",
         "test-get-token-uri",
         [],
-        callerAddress,
+        accounts.get("deployer")!.address,
       ),
     ]).receipts.map(({ result }) => result.expectOk());
   },
@@ -138,13 +137,12 @@ Clarinet.test({
 Clarinet.test({
   name: "test-get-symbol: Can get symbol",
   fn(chain: Chain, accounts: Map<string, Account>) {
-    const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
         "sbtc-token_test",
         "test-get-symbol",
         [],
-        callerAddress,
+        accounts.get("deployer")!.address,
       ),
     ]).receipts.map(({ result }) => result.expectOk());
   },
@@ -154,13 +152,12 @@ Clarinet.test({
   name: "test-get-name: Can get name",
   fn(chain: Chain, accounts: Map<string, Account>) {
 
-    const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
         "sbtc-token_test",
         "test-get-name",
         [],
-        callerAddress,
+        accounts.get("deployer")!.address,
       ),
     ]).receipts.map(({ result }) => result.expectOk());
   },
@@ -169,13 +166,12 @@ Clarinet.test({
 Clarinet.test({
   name: "test-get-decimals: Can get decimals",
   fn(chain: Chain, accounts: Map<string, Account>) {
-    const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
         "sbtc-token_test",
         "test-get-decimals",
         [],
-        callerAddress,
+        accounts.get("deployer")!.address,
       ),
     ]).receipts.map(({ result }) => result.expectOk());
   },
@@ -203,7 +199,6 @@ Clarinet.test({
       result.expectBool(true)
     );
 
-    const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
         "sbtc-token_test",
@@ -211,11 +206,12 @@ Clarinet.test({
         [types.uint(10000000)],
         deployer.address,
       ),
+
       Tx.contractCall(
         "sbtc-token_test",
         "test-get-balance",
         [],
-        callerAddress,
+        accounts.get("deployer")!.address,
       ),
     ]).receipts.map(({ result }) => result.expectOk());
   },
