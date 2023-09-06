@@ -27,7 +27,7 @@ Clarinet.test({
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
-        [],
+        [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
@@ -67,7 +67,7 @@ Clarinet.test({
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
-        [],
+        [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
@@ -108,7 +108,7 @@ Clarinet.test({
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
-        [],
+        [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
@@ -148,7 +148,7 @@ Clarinet.test({
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
-        [],
+        [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
@@ -228,7 +228,7 @@ Clarinet.test({
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
-        [],
+        [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
@@ -587,7 +587,7 @@ Clarinet.test({
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
-        [],
+        [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
@@ -628,7 +628,7 @@ Clarinet.test({
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
-        [],
+        [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
@@ -668,7 +668,7 @@ Clarinet.test({
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
-        [],
+        [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
@@ -748,7 +748,7 @@ Clarinet.test({
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
-        [],
+        [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
@@ -788,7 +788,7 @@ Clarinet.test({
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
-        [],
+        [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
@@ -828,7 +828,7 @@ Clarinet.test({
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
-        [],
+        [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
@@ -868,7 +868,7 @@ Clarinet.test({
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
-        [],
+        [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
@@ -908,7 +908,7 @@ Clarinet.test({
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
-        [],
+        [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
@@ -948,7 +948,7 @@ Clarinet.test({
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
-        [],
+        [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
@@ -988,7 +988,7 @@ Clarinet.test({
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
-        [],
+        [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
@@ -1029,7 +1029,7 @@ Clarinet.test({
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
-        [],
+        [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
@@ -1069,7 +1069,7 @@ Clarinet.test({
       Tx.contractCall(
         "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
         "prepare",
-        [],
+        [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(

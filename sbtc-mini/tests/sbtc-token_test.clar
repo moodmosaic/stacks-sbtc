@@ -1,7 +1,5 @@
 (define-constant wallet-1 'ST1SJ3DTE5DN7X54YDH5D64R3BCB6A2AG2ZQ8YPD5)
 (define-constant wallet-2 'ST2CY5V39NHDPWSXMW9QDT3HC3GD6Q6XX4CFRK9AG)
-(define-constant test-mint-amount u10000000)
-(define-constant test-total-supply (* u2 test-mint-amount))
 
 (define-constant err-unauthorised (err u1000))
 (define-constant err-not-token-owner (err u4))
@@ -27,13 +25,13 @@
 )
 
 ;; Prepare function called for all tests (unless overridden)
-(define-public (prepare)
+(define-public (prepare (amount uint))
 	(begin
 		;; Add the test contract to the protocol contract set.
 		(try! (prepare-add-test-to-protocol))
 		;; Mint some tokens to test principals.
-		(try! (contract-call? .sbtc-token protocol-mint test-mint-amount wallet-1))
-		(try! (contract-call? .sbtc-token protocol-mint test-mint-amount wallet-2))
+		(try! (contract-call? .sbtc-token protocol-mint amount wallet-1))
+		(try! (contract-call? .sbtc-token protocol-mint amount wallet-2))
 		(ok true)
 	)
 )
@@ -42,7 +40,7 @@
 ;; status of this test contract.
 (define-public (prepare-and-revoke-access)
 	(begin
-		(try! (prepare))
+		(try! (prepare u10000000))
 		;; Remove the test contract from the protocol contract set.
 		(revoke-test-contract-protocol-status)
 	)
@@ -255,20 +253,20 @@
 
 ;; @name Can user balance
 (define-public (test-get-balance)
-	(assert-eq-uint (contract-call? .sbtc-token get-balance wallet-1) (ok test-mint-amount) "Balance does not match")
+	(assert-eq-uint (contract-call? .sbtc-token get-balance wallet-1) (ok u10000000) "Balance does not match")
 )
 
 ;; @name User balance includes locked tokens
 (define-public (test-get-balance-includes-locked-tokens)
 	(begin
 		(unwrap! (contract-call? .sbtc-token protocol-lock u1 wallet-1) (err "Could not lock tokens"))
-		(assert-eq-uint (contract-call? .sbtc-token get-balance wallet-1) (ok test-mint-amount) "Balance does not match")
+		(assert-eq-uint (contract-call? .sbtc-token get-balance wallet-1) (ok u10000000) "Balance does not match")
 	)
 )
 
 ;; @name Can get total supply
 (define-public (test-get-total-supply)
-	(assert-eq-uint (contract-call? .sbtc-token get-total-supply) (ok test-total-supply) "Total supply does not match")
+	(assert-eq-uint (contract-call? .sbtc-token get-total-supply) (ok (* u2 u10000000)) "Total supply does not match")
 )
 
 ;; @name Can get token URI
