@@ -32,7 +32,7 @@ Clarinet.test({
 
       Tx.contractCall(
         "sbtc-token_test",
-        "test-transfer-external",
+        "test-transfer-someone-elses-tokens",
         [],
         accounts.get("wallet_1")!.address,
       ),
