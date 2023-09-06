@@ -25,13 +25,13 @@ Clarinet.test({
     const callerAddress = accounts.get("wallet_1")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare",
         [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-transfer-external",
         [],
         callerAddress,
@@ -65,13 +65,13 @@ Clarinet.test({
     const callerAddress = accounts.get("wallet_1")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare",
         [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-transfer",
         [],
         callerAddress,
@@ -106,13 +106,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare",
         [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-unlock-external",
         [],
         callerAddress,
@@ -146,13 +146,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare",
         [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-unlock",
         [],
         callerAddress,
@@ -186,13 +186,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare-and-revoke-access",
         [],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-transfer-external",
         [],
         callerAddress,
@@ -226,13 +226,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare",
         [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-transfer",
         [],
         callerAddress,
@@ -248,7 +248,7 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-set-token-uri-external",
         [],
         callerAddress,
@@ -282,13 +282,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare-add-test-to-protocol",
         [],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-set-token-uri",
         [],
         callerAddress,
@@ -304,7 +304,7 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-set-symbol-external",
         [],
         callerAddress,
@@ -338,13 +338,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare-add-test-to-protocol",
         [],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-set-symbol",
         [],
         callerAddress,
@@ -359,7 +359,7 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-set-name-external",
         [],
         callerAddress,
@@ -393,13 +393,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare-add-test-to-protocol",
         [],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-set-name",
         [],
         callerAddress,
@@ -415,7 +415,7 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-mint-many-external",
         [],
         callerAddress,
@@ -449,13 +449,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare-add-test-to-protocol",
         [],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-mint-many",
         [],
         callerAddress,
@@ -471,7 +471,7 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-mint-external",
         [],
         callerAddress,
@@ -505,13 +505,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare-add-test-to-protocol",
         [],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-mint",
         [],
         callerAddress,
@@ -545,13 +545,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare-and-revoke-access",
         [],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-lock-external",
         [],
         callerAddress,
@@ -585,13 +585,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare",
         [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-lock",
         [],
         callerAddress,
@@ -626,13 +626,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare",
         [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-burn-locked-external",
         [],
         callerAddress,
@@ -666,13 +666,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare",
         [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-burn-locked",
         [],
         callerAddress,
@@ -706,13 +706,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare-and-revoke-access",
         [],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-burn-external",
         [],
         callerAddress,
@@ -746,13 +746,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare",
         [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-protocol-burn",
         [],
         callerAddress,
@@ -786,13 +786,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare",
         [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-get-total-supply",
         [],
         callerAddress,
@@ -826,13 +826,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare",
         [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-get-token-uri",
         [],
         callerAddress,
@@ -866,13 +866,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare",
         [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-get-symbol",
         [],
         callerAddress,
@@ -906,13 +906,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare",
         [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-get-name",
         [],
         callerAddress,
@@ -946,13 +946,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare",
         [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-get-locked-balance",
         [],
         callerAddress,
@@ -986,13 +986,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare",
         [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-get-decimals",
         [],
         callerAddress,
@@ -1027,13 +1027,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare",
         [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-get-balance-includes-locked-tokens",
         [],
         callerAddress,
@@ -1067,13 +1067,13 @@ Clarinet.test({
     const callerAddress = accounts.get("deployer")!.address;
     chain.mineBlock([
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "prepare",
         [types.uint(10000000)],
         deployer.address,
       ),
       Tx.contractCall(
-        "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.sbtc-token_test",
+        "sbtc-token_test",
         "test-get-balance",
         [],
         callerAddress,
