@@ -1,6 +1,8 @@
 import { Account, Chain, Clarinet, Tx, types } from "./deps.ts";
 
-export function bootstrap(chain: Chain, deployer: Account) {
+export function bootstrap(chain: Chain, accounts: Map<string, Account>) {
+  const deployer = accounts.get("deployer")!;
+
   chain.mineBlock([
     Tx.contractCall(
       `${deployer.address}.sbtc-controller`,
@@ -29,7 +31,7 @@ export function bootstrap(chain: Chain, deployer: Account) {
 Clarinet.test({
   name: "test-transfer-someone-elses-tokens: Cannot transfer someone else's tokens",
   fn(chain: Chain, accounts: Map<string, Account>) {
-    bootstrap(chain, accounts.get("deployer")!);
+    bootstrap(chain, accounts);
 
     chain.mineBlock([
       Tx.contractCall(
@@ -45,7 +47,7 @@ Clarinet.test({
 Clarinet.test({
   name: "test-transfer: Token owner can transfer their tokens",
   fn(chain: Chain, accounts: Map<string, Account>) {
-    bootstrap(chain, accounts.get("deployer")!);
+    bootstrap(chain, accounts);
 
     chain.mineBlock([
       Tx.contractCall(
@@ -61,7 +63,7 @@ Clarinet.test({
 Clarinet.test({
   name: "test-get-total-supply: Can get total supply",
   fn(chain: Chain, accounts: Map<string, Account>) {
-    bootstrap(chain, accounts.get("deployer")!);
+    bootstrap(chain, accounts);
 
     chain.mineBlock([
       Tx.contractCall(
@@ -133,7 +135,7 @@ Clarinet.test({
 Clarinet.test({
   name: "test-get-balance: Can user balance",
   fn(chain: Chain, accounts: Map<string, Account>) {
-    bootstrap(chain, accounts.get("deployer")!);
+    bootstrap(chain, accounts);
 
     chain.mineBlock([
       Tx.contractCall(
