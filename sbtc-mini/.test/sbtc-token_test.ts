@@ -5,7 +5,7 @@ export function bootstrap(chain: Chain, accounts: Map<string, Account>) {
 
   chain.mineBlock([
     Tx.contractCall(
-      `${deployer.address}.sbtc-controller`,
+      "sbtc-controller",
       "upgrade",
       [types.list(
         [
