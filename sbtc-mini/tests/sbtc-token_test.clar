@@ -1,6 +1,3 @@
-(define-constant wallet-1 'ST1SJ3DTE5DN7X54YDH5D64R3BCB6A2AG2ZQ8YPD5)
-(define-constant wallet-2 'ST2CY5V39NHDPWSXMW9QDT3HC3GD6Q6XX4CFRK9AG)
-
 (define-constant err-not-token-owner (err u4))
 
 (define-private (assert-eq (result (response bool uint)) (compare (response bool uint)) (message (string-ascii 100)))
@@ -15,14 +12,10 @@
 	(ok (asserts! (is-eq result compare) (err message)))
 )
 
-;; Prepare function called for all tests (unless overridden)
-(define-public (prepare (amount uint))
+(define-public (prepare (amount uint) (recipient principal))
 	(begin
-		;; Add the test contract to the protocol contract set.
 		(try! (contract-call? .sbtc-testnet-debug-controller set-protocol-contract (as-contract tx-sender) true))
-		;; Mint some tokens to test principals.
-		(try! (contract-call? .sbtc-token protocol-mint amount wallet-1))
-		(try! (contract-call? .sbtc-token protocol-mint amount wallet-2))
+		(try! (contract-call? .sbtc-token protocol-mint amount recipient))
 		(ok true)
 	)
 )
@@ -31,14 +24,14 @@
 
 ;; @name Token owner can transfer their tokens
 ;; @caller wallet_1
-(define-public (test-transfer)
-	(contract-call? .sbtc-token transfer u100 tx-sender wallet-2 none)
+(define-public (test-transfer (recipient principal))
+	(contract-call? .sbtc-token transfer u100 tx-sender recipient none)
 )
 
 ;; @name Cannot transfer someone else's tokens
 ;; @caller wallet_1
-(define-public (test-transfer-someone-elses-tokens)
-	(assert-eq (contract-call? .sbtc-token transfer u100 wallet-2 tx-sender none) err-not-token-owner "Should have failed")
+(define-public (test-transfer-someone-elses-tokens (other-sender principal))
+	(assert-eq (contract-call? .sbtc-token transfer u100 other-sender tx-sender none) err-not-token-owner "Should have failed")
 )
 
 ;; @name Can get name
@@ -57,8 +50,8 @@
 )
 
 ;; @name Can user balance
-(define-public (test-get-balance)
-	(assert-eq-uint (contract-call? .sbtc-token get-balance wallet-1) (ok u10000000) "Balance does not match")
+(define-public (test-get-balance (wallet principal))
+	(assert-eq-uint (contract-call? .sbtc-token get-balance wallet) (ok u10000000) "Balance does not match")
 )
 
 ;; @name Can get total supply

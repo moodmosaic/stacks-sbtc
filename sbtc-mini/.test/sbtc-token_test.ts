@@ -22,7 +22,13 @@ export function bootstrap(chain: Chain, accounts: Map<string, Account>) {
     Tx.contractCall(
       "sbtc-token_test",
       "prepare",
-      [types.uint(10000000)],
+      [types.uint(10000000), types.principal(accounts.get("wallet_1")!.address)],
+      deployer.address,
+    ),
+    Tx.contractCall(
+      "sbtc-token_test",
+      "prepare",
+      [types.uint(10000000), types.principal(accounts.get("wallet_2")!.address)],
       deployer.address,
     ),
   ]).receipts.map(({ result }) => result.expectOk());
@@ -37,7 +43,7 @@ Clarinet.test({
       Tx.contractCall(
         "sbtc-token_test",
         "test-transfer-someone-elses-tokens",
-        [],
+        [types.principal(accounts.get("wallet_2")!.address)],
         accounts.get("wallet_1")!.address,
       ),
     ]).receipts.map(({ result }) => result.expectOk());
@@ -53,7 +59,7 @@ Clarinet.test({
       Tx.contractCall(
         "sbtc-token_test",
         "test-transfer",
-        [],
+        [types.principal(accounts.get("wallet_2")!.address)],
         accounts.get("wallet_1")!.address,
       ),
     ]).receipts.map(({ result }) => result.expectOk());
@@ -141,7 +147,7 @@ Clarinet.test({
       Tx.contractCall(
         "sbtc-token_test",
         "test-get-balance",
-        [],
+        [types.principal(accounts.get("wallet_1")!.address)],
         accounts.get("deployer")!.address,
       ),
     ]).receipts.map(({ result }) => result.expectOk());
