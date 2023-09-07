@@ -22,13 +22,19 @@ export function bootstrap(chain: Chain, accounts: Map<string, Account>) {
     Tx.contractCall(
       "sbtc-token_test",
       "prepare",
-      [types.uint(10000000), types.principal(accounts.get("wallet_1")!.address)],
+      [
+        types.uint(10000000),
+        types.principal(accounts.get("wallet_1")!.address),
+      ],
       deployer.address,
     ),
     Tx.contractCall(
       "sbtc-token_test",
       "prepare",
-      [types.uint(10000000), types.principal(accounts.get("wallet_2")!.address)],
+      [
+        types.uint(10000000),
+        types.principal(accounts.get("wallet_2")!.address),
+      ],
       deployer.address,
     ),
   ]).receipts.map(({ result }) => result.expectOk());
