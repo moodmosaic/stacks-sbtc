@@ -30,6 +30,7 @@
 
 ;; @name Cannot transfer someone else's tokens
 ;; @caller wallet_1
+;; #[allow(unchecked_data)]
 (define-public (test-transfer-someone-elses-tokens (other-sender principal))
 	(assert-eq (contract-call? .sbtc-token transfer u100 other-sender tx-sender none) err-not-token-owner "Should have failed")
 )
@@ -50,6 +51,7 @@
 )
 
 ;; @name Can user balance
+;; #[allow(unchecked_data)]
 (define-public (test-get-balance (wallet principal))
 	(assert-eq-uint (contract-call? .sbtc-token get-balance wallet) (ok u10000000) "Balance does not match")
 )
